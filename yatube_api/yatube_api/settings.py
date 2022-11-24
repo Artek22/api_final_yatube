@@ -1,7 +1,7 @@
 import os
 from datetime import timedelta
-from key import SECRET_KEY
-# если импортирую dotenv, то при проверке выдается ошибка
+# если импортирую dotenv, то при проверке выдается ошибка, что модуль не найден
+# pip freeze > requirements.txt не помогает, не пойму в чем дело.
 
 # from dotenv import load_dotenv
 
@@ -10,7 +10,8 @@ from key import SECRET_KEY
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = SECRET_KEY  # os.getenv('SECRET_KEY')
+SECRET_KEY = 'hhz7l-ltdismtf@bzyz+rple7*s*w$jak%whj@(@u0eok^f9k4'
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
