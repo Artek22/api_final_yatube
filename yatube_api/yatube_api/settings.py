@@ -1,13 +1,16 @@
 import os
 from datetime import timedelta
-from dotenv import load_dotenv
+from key import SECRET_KEY
+# если импортирую dotenv, то при проверке выдается ошибка
 
-load_dotenv()
+# from dotenv import load_dotenv
+
+# load_dotenv()
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = SECRET_KEY  # os.getenv('SECRET_KEY')
 
 DEBUG = True
 
